@@ -22,12 +22,12 @@ const LoginPage = () => {
         <div>
           <input type='hidden' name='redirectTo' value={from} />
           <Form.Group className='mb-3' controlId='formBasicEmail'>
-            <Form.Label>Username</Form.Label>
-            <Form.Control type='text' placeholder='Enter email' name='username' />
+            <Form.Label>Пользователь</Form.Label>
+            <Form.Control type='text' placeholder='Введите имя пользователь' name='username' />
           </Form.Group>
           <Form.Group className='mb-3' controlId='formBasicPassword'>
-            <Form.Label>Password</Form.Label>
-            <Form.Control type='password' placeholder='Password' name='password' />
+            <Form.Label>Пароль</Form.Label>
+            <Form.Control type='password' placeholder='Введите пароль' name='password' />
           </Form.Group>
           <Button type='submit' disabled={isLoggingIn}>
             {isLoggingIn ? 'Входим...' : 'Вход'}

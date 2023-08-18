@@ -20,13 +20,7 @@ export async function loginAction({ request }: LoaderFunctionArgs) {
     : null
 }
 
-export async function loginLoader({ request }: LoaderFunctionArgs) {
-  const search = new URLSearchParams(new URL(request.url).search)
+export async function loginLoader() {
   const { isAuth } = store.getState().auth
-
-  if (isAuth) {
-    return redirect('/')
-  } else {
-    return search.size ? null : redirect('/')
-  }
+  return isAuth ? redirect('/') : null
 }

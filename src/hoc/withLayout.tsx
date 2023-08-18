@@ -16,9 +16,6 @@ export const withLayout = <P extends object>(WrappedComponent: ComponentType<P>)
             </Col>
           </Container>
         </main>
-        <footer>
-          <Navigation />
-        </footer>
       </div>
     )
   }
